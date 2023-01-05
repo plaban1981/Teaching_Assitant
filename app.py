@@ -29,7 +29,7 @@ def ask(question, chat_log=None):
                model="text-davinci-003",
                prompt=prompt_text,
                temperature=0.7,
-               max_tokens=512,
+               max_tokens=1024,
                top_p=1,
                frequency_penalty=0,
                presence_penalty=0
@@ -55,7 +55,7 @@ with st.form("Prediction_form"):
    # Create a list of options for the drop-down menu
    options = ['y', 'n']
    # Create the drop-down menu
-   selected_option = st.sidebar.selectbox('Select an option:', options)
+   selected_option = st.sidebar.selectbox('Do you want to continue with the conversation :', options)
    # Display the selected option
    st.write(f'You selected: {selected_option}')
     
